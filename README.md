@@ -1,4 +1,4 @@
-# Projet de Course d'endurance lycée paul eluard
+# Projet de Course d'endurance Lycée Paul Eluard
 
 **En français :**
 
