@@ -27,7 +27,6 @@ section {
   border: #ccc solid 1px;
   padding: 20px;
   margin-bottom: 20px;
-  
 }
 
 h1 {
@@ -75,7 +74,7 @@ footer p {
   padding: 5px;
   font-size: 30px;
   color: #0077b6;
-  font-weight:bolder;
+  font-weight: bolder;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,11 +87,9 @@ footer p {
   object-fit: cover;
   margin: 4px 1px;
   vertical-align: middle; /* Centre verticalement l'image par rapport au texte */
-
 }
-.left-img{
+.left-img {
   transition: transform 0.3s ease; /* Animation de transition fluide */
-
 }
 .rotate-180deg {
   transform: rotate(180deg); /* Rotation de l'image de 180 degrés */
@@ -124,10 +121,10 @@ footer p {
   /* background-color: #1f6077; */
   transform: translateY(0);
 }
-button > a{
+button > a {
   color: #fff;
 }
-button >a:hover{
+button > a:hover {
   text-decoration: none;
   color: #fff;
 }

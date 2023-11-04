@@ -56,7 +56,7 @@ function applyStylesToLink() {
   // Appliquez des styles de texte au lien
   linkpage.style.textDecoration = 'none';
   linkpage.style.fontFamily = "sans-serif", "Tahoma, Geneva, Verdana, Segoe UI";
-  linkpage.style.fontSize = '20px';
+  linkpage.style.fontSize = '26px';
   linkpage.style.color = '#768de3';
 
   // Écoutez les événements pour modifier les styles de lien au survol, au clic, etc.
