@@ -1,14 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
-
-:root,*,::before,::after,body {
-  font-family: "Young Serif, serif";
+:root,
+*,
+::before,
+::after,
+body {
+  font-family: "sans-serif", Tahoma, Geneva, Verdana, "Segoe UI";
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* box-shadow: 0 0 0 3px red inset; */
 }
-
-
-
 .sticky-header {
   background-color: #333;
   color: white;
@@ -16,23 +16,18 @@
   padding: 20px;
   position: sticky;
   top: 0;
-  z-index: 100; /* Niveau de profondeur pour s'assurer que l'en-tête est au-dessus du contenu */
+  z-index: 100;
 }
-main {
-  margin: 20px;
+#main-content {
+  margin: 30px;
+  /* padding: 5%; */
+  margin-bottom: 150px;
 }
-
 section {
-  border: 1px solid #ccc;
+  border: #ccc solid 1px;
   padding: 20px;
   margin-bottom: 20px;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  margin: 0 auto;
+  
 }
 
 h1 {
@@ -42,97 +37,103 @@ h1 {
   font-weight: bold;
   text-decoration: none;
 }
-
 footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   background-color: #333;
-  color: white;
+  color: #fff;
   text-align: center;
-  padding: 35px;
+  padding: 25px;
 }
-
 footer p {
-  font-size: 26px;
+  font-size: 22px;
 }
-/* Styles CSS pour les éléments stylés */
 .styled-section {
   background-color: #f5f5f5;
   padding: 20px;
-  border: 1px solid #ccc;
+  border: #ccc solid 1px;
   border-radius: 10px;
   margin: 20px;
   text-align: center;
 }
 
-.section-title {
+.bloc-top {
+  padding: 2px;
+  width: 55%;
+  border: 0;
+  outline: none;
+  display: flex;
+  text-align: center; /* Centre le texte horizontalement dans le bouton */
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.bloc-top .section-title {
+  display: inline-block; /* Permet de définir des marges */
+  padding: 5px;
   font-size: 30px;
   color: #0077b6;
-  font-weight: bold;
+  font-weight:bolder;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  margin: 0 0 8px 0;
+  text-align: left;
 }
+.bloc-top img.left-img {
+  float: left; /* Fait flotter l'image à gauche du texte */
+  width: 5%; /* Définir la largeur de l'image (ajustez selon vos besoins) */
+  height: auto; /* Pour conserver les proportions de l'image */
+  object-fit: cover;
+  margin: 4px 1px;
+  vertical-align: middle; /* Centre verticalement l'image par rapport au texte */
 
+}
+.left-img{
+  transition: transform 0.3s ease; /* Animation de transition fluide */
+
+}
+.rotate-180deg {
+  transform: rotate(180deg); /* Rotation de l'image de 180 degrés */
+}
 .section-paragraph {
-  font-size: 24px;
   color: #333;
-  line-height: 1.5;
+  line-height: 2;
   display: flex;
   flex-direction: column;
-  align-items: justify;
-  text-align: justify;
+  text-align: left;
 }
 
 #style-button {
-  padding: 15px 15px;
-  color: #cbbddb;
-  font-size: 25px;
-  overflow: hidden;
-  margin: 20px;
-  border-radius: 5px;
-  transition: 0.5s;
-  letter-spacing: 3px;
-  border: 1px solid #8f7cec;
-  /* text-transform: uppercase; */
-  box-shadow: 0 0 10px #989797;
-}
-
-#style-button:hover {
-  background: #e6ecef;
+  padding: 10px 20px;
+  /* background-color: #3498db; */
+  border: none;
   color: #fff;
   border-radius: 5px;
-  box-shadow: 0 0 5px #8f7cec, 0 0 10px #8f7cec, 0 0 25px #8f7cec,
-    0 0 50px #8f7cec;
-}
-
-
-.bloc-top {
-  /* margin: 20px 0 0 0; */
-  padding: 5px;
-  display: block;
-  width: 50%;
-  height: 50px;
-  border: none;
-  outline: none;
-  font-size: 20px;
-  display: flex;
-  justify-content: space-between;
-  /* align-items: left; */
-  /* background: rgb(27, 27, 153); */
-  /* color: #f1f1f1; */
+  /* border: #1f6077; */
   cursor: pointer;
-  border-radius: 5px;
-  
+  transition: all 0.3s;
+}
+#style-button:hover {
+  /* background-color: #2980b9; */
+  transform: translateY(-3px);
 }
 
-.left-img{
-  float: left;
-  margin: 10px;
+#style-button:active {
+  /* background-color: #1f6077; */
+  transform: translateY(0);
+}
+button > a{
+  color: #fff;
+}
+button >a:hover{
+  text-decoration: none;
+  color: #fff;
 }
 .dropdown {
   padding: 10px;
-  border: 1px solid #ccc;
+  border: #ccc solid 1px;
   border-radius: 10px;
   margin: 20px;
   text-align: center;
@@ -141,30 +142,12 @@ footer p {
   transition: height 0.4s ease-in-out;
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
   background: rgb(224, 223, 226);
-  border-style: 5px solid #333;
 }
-
-
 
 .bloc-top img {
   width: 20px;
   float: left;
 }
-
 .bloc-links {
   padding: 0 22px;
-}
-
-.bloc-links li {
-  list-style-type: none;
-  padding: 5px 0;
-}
-
-.bloc-links li a {
-  font-size: 18px;
-  color: #f1f1f1;
-  margin-left: 5px;
-}
-.bloc-links li:last-child {
-  padding-bottom: 25px;
 }
