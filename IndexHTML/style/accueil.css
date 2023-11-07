@@ -1,4 +1,4 @@
-
+/* 
 * {
   margin: 0px;
   padding: 0px;
@@ -11,27 +11,26 @@ body {
   box-sizing: border-box;
 }
 
-/* Style de l'en-tête */
+Style de l'en-tête
 header {
   background-color: #142435;
   color: #fff;
 }
 
-/* Style des sections */
+Style des sections
 section {
   border: 2px solid #cfcfcf;
   padding: 20px;
   margin-bottom: 20px;
 }
 
-/* Style des titres de section */
+Style des titres de section
 section h2 + h3{
   font-size: 30px;
   margin-top: 0;
   color: var(--text-color);
 }
-
-/* Style de la liste à puces */
+Style de la liste à puces
 ul {
   list-style: disc;
   margin-left: 20px;
@@ -43,4 +42,4 @@ header h1 {
 section p {
   font-family: "Arial, Helvetica, sans-serif";
   font-size: 24px;
-}
+} */

@@ -40,7 +40,7 @@ h2.title_section:hover {
 }
 
 /* cible uniquement le h1 du header */
-.navbar > .headerIndex > h1 {
+h1 {
   font-size: 23px;
   text-align: left;
 }
