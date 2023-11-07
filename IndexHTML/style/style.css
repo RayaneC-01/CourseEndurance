@@ -1,0 +1,149 @@
+/* Styles généraux */
+:root {
+  --primary-color: #3f51b5;
+  --header-color: #fff;
+  --section-bg-color: #cfcfcf;
+  --title-color: #444444;
+  --footer-color: #007bff;
+  --bg-color: #f1f1f1;
+  --text-color: #333;
+  --li-color: #1e6fa8;
+  --text-header_footer: #e74141;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 2.5em;
+  font-size: 22px;
+  font-family: Verdana, sans-serif, Geneva, Tahoma;
+}
+.reglement_course > p,
+.participation > p,
+.deroulementInfos > p,
+.introduction > p,
+.systeme > p {
+  font-size: 22px;
+  color: var(--text-color);
+  text-align: left;
+  line-height: 1.5;
+  margin-bottom: 10px; /* Exemple de marge inférieure pour les éléments <p> */
+}
+h2.title_section {
+  color: var(--text-color);
+  font-size: 26px;
+  font-weight: bolder;
+}
+
+h2.title_section:hover {
+  color: #e91e63;
+}
+
+/* cible uniquement le h1 du header */
+.navbar > .headerIndex > h1 {
+  font-size: 23px;
+  text-align: left;
+}
+/* selectionne les classes des balises header et footer */
+.footerIndex {
+  display: flex;
+  align-items: center; /* Centre verticalement les éléments */
+  justify-content: center; /* Centre horizontalement les éléments */
+  flex-wrap: wrap; /* Passez à la ligne si l'espace est insuffisant */
+  text-align: center;
+  padding: 20px; /* Espacement autour du footer */
+  /* border: 2px solid #e91e63; */
+  background-color: var(--bg-color);
+  font-size: 20px;
+  color: var(--text-header_footer);
+  list-style: none;
+  background-color: var(--bg-color);
+}
+
+/* Style pour le conteneur des liens et du copyright */
+.linksAndCopyright {
+  display: flex;
+  flex-direction: column; /* Disposition en colonnes pour les liens et le copyright */
+  align-items: center; /* Centre les éléments horizontalement dans le conteneur */
+  /* gap: 10px; Espacement entre les éléments dans le conteneur */
+}
+
+/* Style pour la classe .listeFooter (ul et li) */
+.listFooter {
+  list-style: none;
+  display: flex; /* Disposition des éléments en ligne (les liens) */
+  gap: 15px;
+  color: var(--li-color);
+  font-size: 26px;
+}
+
+/* Style pour chaque élément de la liste (chaque lien) */
+.list_item {
+  text-align: center; /* Centre le texte des liens */
+}
+
+/* Style pour les liens */
+.linkFooter {
+  text-decoration: none; /* Supprime la décoration de lien (soulignement par défaut) */
+  color: var(--text-color);
+}
+
+/* Style pour le texte du copyright */
+.copyrightIndex {
+  margin-top: 20px; /* Espacement entre les liens et le copyright */
+}
+
+/* selectionne ts les li et ul des 3 classes (introduction objectifs systeme)*/
+.participation li,
+.deroulementInfos li,
+.introduction li,
+.objectifs li,
+.systeme li {
+  font-size: 21px;
+  color: var(--li-color);
+  list-style-type: disc;
+  text-align: left;
+  margin-left: 30px;
+}
+
+/*selectionne la nav avec la classe navbar ligne  20 */
+.navbar {
+  font-size: 24px;
+  position: sticky;
+  top: 0px;
+  background-color: var(--bg-color);
+}
+/* Selectionne le btn Accueil avec la classe navbar-brand */
+.container > .navbar-brand {
+  font-size: 26px;
+  color: red;
+}
+
+/* cible les liens a dans li  avec les classes .nav-item et .dropdown (tout le menu deroulant) */
+.nav-item.dropdown li a {
+  color: lightseagreen;
+  font-size: 24px;
+  color: var(--text-color);
+}
+/* cible les liens a dans li avec la classe .dropdown-menu (sous menu) */
+.dropdown-menu li > a {
+  font-size: 15px;
+  color: #e91e63;
+}
+
+main {
+  margin: 20px;
+}
+
+section {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+/* seelctionne la balise form */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}

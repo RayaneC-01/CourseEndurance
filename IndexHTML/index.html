@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page d'accueil de la course d'endurance</title>
+
+    <link rel="stylesheet" href="./style/reset.css" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <!-- Ajout des liens vers Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoI..."
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand">
+      <header class="headerIndex py-2">
+        <h1>Bienvenue à la Course d'Endurance !</h1>
+      </header>
+
+      <div class="container">
+        <a class="navbar-brand" href="./index.html">Accueil</a>
+        <button
+          .navbar
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#introduction">A propos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#objectifs">Objectifs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#systeme">Système Numérique</a>
+            </li>
+            <!-- Ajout d'un menu déroulant -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Course
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="reglement_course.html"
+                    >Reglement de la course</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Création d'une course</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Inscription a la course</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Résultat de la course</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Analyse de la course</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Infos Pratique </a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Contact
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="#">FAQ</a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/IndexHTML/formulaire_contact.html"
+                    >Formulaire de Contacts</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <!-- Fin du menu déroulant -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container my-5">
+      <section class="introduction" class="p-4 bg-light">
+        <h2 class="title_section">Introduction</h2>
+        <p>
+          La course d'endurance annuelle est un événement passionnant où les
+          participants mettent à l'épreuve leur endurance et leur détermination.
+          Cet événement est organisé par le lycée Paul Eluard, qui s'efforce de
+          créer une communauté vivante en dehors des heures de cours. Au cours
+          de l'année, le lycée propose divers événements festifs, y compris des
+          concerts, des représentations théâtrales et des compétitions
+          sportives. Vous trouverez ci dessus la rubrique liées a la course , à
+          savoir :
+        </p>
+        <ul>
+          <li>Le règlement de la course (en construction)</li>
+          <li>La création d'une course</li>
+          <li>L'inscription à une course</li>
+          <li>Les résultats de la course</li>
+          <li>Une analyse de la course</li>
+          <li>Infos pratiques pour les coureurs et les organisateurs</li>
+        </ul>
+      </section>
+
+      <section class="objectifs" class="p-4 bg-light">
+        <h2 class="title_section">Objectifs de l'événement</h2>
+        <ul>
+          <li>Créer une journée mémorable de course et de compétition.</li>
+          <li>
+            Promouvoir l'endurance, la détermination et la participation de tous
+            les élèves et personnels.
+          </li>
+          <li>
+            Offrir une expérience sportive et communautaire enrichissante.
+          </li>
+        </ul>
+      </section>
+
+      <section class="systeme" class="p-4 bg-light">
+        <h2 class="title_section">Système Numérique</h2>
+        <p>
+          La course d'endurance sera gérée à l'aide d'un système numérique
+          complet, comprenant :
+        </p>
+        <ul>
+          <li>Une application Windows pour la gestion de la course.</li>
+          <li>Un lecteur RFID pour détecter le passage des coureurs.</li>
+          <li>
+            Un réseau Wifi pour connecter les téléphones portables des
+            participants.
+          </li>
+          <li>
+            Une application Android pour enregistrer les rythmes cardiaques des
+            participants et transmettre leurs performances.
+          </li>
+          <li>Un grand écran d'affichage pour suivre l'événement en direct.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footerIndex py-3">
+      <div class="linksAndCopyright">
+        <ul class="listFooter">
+          <li class="list_item">
+            <a href="./index.html" class="linkFooter">Home</a>
+          </li>
+          <li class="list_item">
+            <a href="./faq_page.html" class="linkFooter">FAQs</a>
+          </li>
+          <li class="list_item">
+            <a
+              href="http://www.lyceepauleluard.fr/site/index.php/lycee/presentationlycee/presentationlycee-etab"
+              class="linkFooter"
+              >About</a
+            >
+          </li>
+        </ul>
+        <p class="copyrightIndex">
+          © 2023 Course - Endurance / Tous droits Réservés
+        </p>
+      </div>
+    </footer>
+
+    <!-- Ajout des scripts Bootstrap JavaScript (jQuery est requis) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./scripts/pageIndex.js"></script>
+  </body>
+</html>
