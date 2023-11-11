@@ -1,4 +1,26 @@
-/* Styles généraux */
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Box-sizing...........Better default `box-sizing`.
+ * Global...............Globally-available variables and config.
+ *
+ * BASE
+ * HTML elements........Hn and HTML styles.
+ *
+ * OBJECTS
+ * Wrappers.............Wrapping and constraining elements.
+ *
+ * COMPONENTS
+ *
+ * TRUMPS
+ * Text.................Text helpers.
+		source: https://cssguidelin.es/#introduction
+ */
+
+/*------------------------------------*\
+  #SETTINGS
+\*------------------------------------*/
 :root {
   --primary-color: #3f51b5;
   --header-color: #fff;
@@ -7,44 +29,102 @@
   --footer-color: #007bff;
   --bg-color: #f1f1f1;
   --text-color: #333;
-  --li-color: #1e6fa8;
-  --text-header_footer: #e74141;
+  --li-color: #666;
+  --text-header_footer: #c83131;
 }
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* box-shadow: 0 0 0 3px red inset; */
+}
+
+/*------------------------------------*\
+  #BASE
+\*------------------------------------*/
+html {
+  font-size: 62.5%;
+  font-size: calc(1em * 0.625);
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
-  line-height: 2.5em;
-  font-size: 22px;
-  font-family: Verdana, sans-serif, Geneva, Tahoma;
-}
-.reglement_course > p,
-.participation > p,
-.deroulementInfos > p,
-.introduction > p,
-.systeme > p {
-  font-size: 22px;
-  color: var(--text-color);
-  text-align: left;
   line-height: 1.5;
-  margin-bottom: 10px; /* Exemple de marge inférieure pour les éléments <p> */
-}
-h2.title_section {
-  color: var(--text-color);
-  font-size: 26px;
-  font-weight: bolder;
+  /* j'utilise un font stack pr améliorer les performances web, et c plus joli */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-h2.title_section:hover {
-  color: #e91e63;
+ol,
+ul {
+  padding-left: 4rem;
+  list-style: decimal;
 }
-
-/* cible uniquement le h1 du header */
+h1,
+h2,
+h3 {
+  margin-bottom: 2rem;
+}
 h1 {
   font-size: 23px;
-  text-align: left;
 }
-/* selectionne les classes des balises header et footer */
+
+img {
+  object-fit: cover;
+  max-width: 17rem;
+  margin: 0 10px;
+  height: auto;
+}
+p {
+  font-size: 17px;
+  color: var(--text-color);
+  /* max-width: 90rem; */
+}
+a {
+  text-decoration: none;
+}
+
+/*------------------------------------*\
+  #OBJECTS
+\*------------------------------------*/
+main {
+  background-image: url("./images/Logo-PE-gauche.png");
+}
+section {
+  border: 3px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Ombre avec 10px de flou et opacité de 0.3 */
+  width: 100%;
+}
+
+/*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+/* .nav-item {
+  margin: 0 1.25rem;
+} */
+.active-link {
+  text-decoration: underline;
+}
+.nav-link:focus-visible {
+  box-shadow: 0;
+  outline: 1px solid rgb(255, 0, 136);
+}
+.options-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.title_section {
+  color: var(--text-color);
+  font-size: 26px;
+  font-weight: bold;
+}
+
 .footerIndex {
   display: flex;
   align-items: center; /* Centre verticalement les éléments */
@@ -53,21 +133,16 @@ h1 {
   text-align: center;
   padding: 20px; /* Espacement autour du footer */
   /* border: 2px solid #e91e63; */
-  background-color: var(--bg-color);
   font-size: 20px;
   color: var(--text-header_footer);
-  list-style: none;
-  background-color: var(--bg-color);
+  background-color: var(--section-bg-color);
 }
-
 /* Style pour le conteneur des liens et du copyright */
 .linksAndCopyright {
   display: flex;
   flex-direction: column; /* Disposition en colonnes pour les liens et le copyright */
   align-items: center; /* Centre les éléments horizontalement dans le conteneur */
-  /* gap: 10px; Espacement entre les éléments dans le conteneur */
 }
-
 /* Style pour la classe .listeFooter (ul et li) */
 .listFooter {
   list-style: none;
@@ -75,54 +150,25 @@ h1 {
   gap: 15px;
   color: var(--li-color);
   font-size: 26px;
+  margin-bottom: 2rem;
 }
-
-/* Style pour chaque élément de la liste (chaque lien) */
 .list_item {
   text-align: center; /* Centre le texte des liens */
 }
-
 /* Style pour les liens */
 .linkFooter {
   text-decoration: none; /* Supprime la décoration de lien (soulignement par défaut) */
   color: var(--text-color);
 }
-
-/* Style pour le texte du copyright */
-.copyrightIndex {
-  margin-top: 20px; /* Espacement entre les liens et le copyright */
-}
-
 /* selectionne ts les li et ul des 3 classes (introduction objectifs systeme)*/
-.participation li,
-.deroulementInfos li,
-.introduction li,
-.objectifs li,
-.systeme li {
-  font-size: 21px;
+.listing li {
+  font-size: 22px;
   color: var(--li-color);
-  list-style-type: disc;
-  text-align: left;
-  margin-left: 30px;
-}
-
-/*selectionne la nav avec la classe navbar ligne  20 */
-.navbar {
-  font-size: 24px;
-  position: sticky;
-  top: 0px;
-  background-color: var(--bg-color);
-}
-/* Selectionne le btn Accueil avec la classe navbar-brand */
-.container > .navbar-brand {
-  font-size: 26px;
-  color: red;
 }
 
 /* cible les liens a dans li  avec les classes .nav-item et .dropdown (tout le menu deroulant) */
 .nav-item.dropdown li a {
-  color: lightseagreen;
-  font-size: 24px;
+  font-size: 22px;
   color: var(--text-color);
 }
 /* cible les liens a dans li avec la classe .dropdown-menu (sous menu) */
@@ -131,19 +177,6 @@ h1 {
   color: #e91e63;
 }
 
-main {
-  margin: 20px;
-}
-
-section {
-  border: 1px solid #ccc;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-/* seelctionne la balise form */
-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  margin: 0 auto;
-}
+/*------------------------------------*\
+  #TRUMPS
+\*------------------------------------*/
