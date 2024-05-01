@@ -1,40 +1,71 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
+/* Police et taille du texte pour la navbar */
+.navbar-nav .nav-link {
+  font-size: 20px;
 }
 
-main {
-    margin: 20px;
+/* Styles pour la barre de navigation personnalisée */
+.custom-navbar {
+  background-color: #f0f0f0; /* Couleur de fond */
+  padding: 10px 0; /* Espacement intérieur */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+
 }
 
+
+/* Styles pour les liens dans la barre de navigation */
+.custom-navbar .navbar-nav .nav-link {
+  font-size: 18px; /* Taille de la police */
+  color: #333; /* Couleur du texte */
+}
+
+/* Styles pour le bouton de recherche dans la barre de navigation */
+.custom-navbar .form-control {
+  width: 300px; /* Largeur du champ de recherche */
+}
+
+/* Taille de l'image dans le navbar */
+.img_header {
+  width: 120px;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Taille de la police pour les paragraphes */
+p {
+  font-size: 17px;
+}
+
+/* Style pour les éléments de la classe navbar-nav */
+.navbar-nav.me-auto li.nav-item {
+  margin-right: 10px; /* Espacement entre les éléments */
+}
+
+/* Style pour les éléments dans la classe navbar-nav */
+.navbar-nav.me-auto li.nav-item a.nav-link {
+  color: #333; /* Couleur du texte */
+}
+
+/* Cards pour les sections */
 section {
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin-bottom: 20px;
+  margin-bottom: 20px; /* Espacement entre les sections */
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: 0 auto;
+.card {
+  border: 2px solid #ccc; /* Bordure */
+  border-radius: 5px; /* Coins arrondis */
+  padding: 20px; /* Espacement interne */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre */
 }
-
-h2 {
-    font-size: 20px;
+.listing {
+  font-size: 17px;
 }
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
+main {
+  background-image: url("./images/Logo-PE-gauche.png");
 }
