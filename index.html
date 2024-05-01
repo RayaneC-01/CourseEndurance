@@ -3,46 +3,201 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bienvenue à la course d'endurance</title>
-    <link rel="stylesheet" href="style/style.css" />
+    <title>Course d'endurance - page d'accueil</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/style/style.css" />
   </head>
 
   <body>
-    <header>
-      <h1>Bienvenue à la course d'endurance</h1>
-    </header>
+    <nav class="navbar navbar-expand-xl custom-navbar">
+      <div class="container-fluid">
+        <img
+          class="img_header"
+          src="/Images/Logo-PE-gauche.png"
+          alt="Lycee Paul ELUARD logo"
+        />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html"
+                >Accueil</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="HTML/about.html">À propos</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Course
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="/HTML/reglement_course.html">Reglement de la course</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Création d'une course</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Inscription à la course</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Résultat de la course</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Analyse de la course</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Infos Pratiques</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Contact
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">FAQ</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Formulaire de Contacts</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form id="search-form" class="d-flex" role="search">
+            <input
+              id="search-input"
+              class="form-control me-2"
+              type="search"
+              placeholder="Rechercher"
+              aria-label="Rechercher"
+            />
+            <button
+              id="search-button"
+              class="btn btn-outline-success"
+              type="submit"
+            >
+              Rechercher
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
 
-    <main>
-      <!-- Formulaire de création de course -->
-      <section id="create-course">
-        <h2>Création de Course</h2>
-        <form id="course-form">
-          <!-- Nom, lieu, participants, type de course, etc. -->
-          <!-- Bouton pour créer la course -->
-        </form>
+    <main role="main" class="container my-5">
+      <section class="introduction card">
+        <!-- Ajout de la classe "card" -->
+        <h2 class="title_section">Introduction</h2>
+        <p>
+          La course d'endurance annuelle est un événement passionnant où les
+          participants mettent à l'épreuve leur endurance et leur détermination.
+          Cet événement est organisé par le lycée Paul Eluard, qui s'efforce de
+          créer une communauté vivante en dehors des heures de cours. Au cours
+          de l'année, le lycée propose divers événements festifs, y compris des
+          concerts, des représentations théâtrales et des compétitions
+          sportives. <br />
+          Vous trouverez ci dessus la rubrique liées a la course, à savoir :
+        </p>
+        <ul class="listing">
+          <li>Le règlement de la course (en construction)</li>
+          <li>La création d'une course</li>
+          <li>L'inscription à une course</li>
+          <li>Les résultats de la course</li>
+          <li>Une analyse de la course</li>
+          <li>Infos pratiques pour les coureurs et les organisateurs</li>
+        </ul>
       </section>
-      <!-- Formulaire d'analyse de résultats -->
-      <section id="analyze-results">
-        <h2>Analyse des Résultats</h2>
-        <form id="results-form">
-          <!-- Sélection de la course, analyse globale/individuelle, etc. -->
-          <!-- Bouton pour lancer l'analyse -->
-        </form>
+
+      <section class="objectifs card">
+        <!-- Ajout de la classe "card" -->
+        <h2 class="title_section">Objectifs de l'événement</h2>
+        <ul class="listing">
+          <li>Créer une journée mémorable de course et de compétition.</li>
+          <li>
+            Promouvoir l'endurance, la détermination et la participation de tous
+            les élèves et personnels.
+          </li>
+          <li>
+            Offrir une expérience sportive et communautaire enrichissante.
+          </li>
+        </ul>
       </section>
-      <!-- Formulaire de gestion de course en temps réel -->
-      <section id="manage-course">
-        <h2>Gestion de Course en Temps Réel</h2>
-        <form id="live-course-form">
-          <!-- Sélection de la course, démarrer/annuler/arrêter la course, affichage en temps réel, etc. -->
-          <!-- Bouton pour lancer la gestion -->
-        </form>
+
+      <section class="systeme card">
+        <!-- Ajout de la classe "card" -->
+        <h2 class="title_section">Système Numérique</h2>
+        <p>
+          La course d'endurance sera gérée à l'aide d'un système numérique
+          complet, comprenant :
+        </p>
+        <ul class="listing">
+          <li>Une application Windows pour la gestion de la course.</li>
+          <li>Un lecteur RFID pour détecter le passage des coureurs.</li>
+          <li>
+            Un réseau Wifi pour connecter les téléphones portables des
+            participants.
+          </li>
+          <li>
+            Une application Android pour enregistrer les rythmes cardiaques des
+            participants et transmettre leurs performances.
+          </li>
+          <li>Un grand écran d'affichage pour suivre l'événement en direct.</li>
+        </ul>
       </section>
     </main>
-    <footer>
-      <p>&copy; 2023 Course d'endurance Rayane Chaabane</p>
-    </footer>
 
-    <!-- partial -->
-    <script src="scripts/script.js"></script>
+    <div class="container">
+      <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item">
+            <a href="./index.html" class="nav-link px-2 text-body-secondary"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="HTML/about.html" class="nav-link px-2 text-body-secondary"
+              >About</a
+            >
+          </li>
+        </ul>
+        <p class="text-center text-body-secondary">
+          © 2024 All rights reserved, Rayane Chaabane
+        </p>
+      </footer>
+    </div>
+
+    <script src="JS/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
